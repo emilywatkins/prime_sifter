@@ -5,11 +5,17 @@ class Prime
 
   def sift
     range = (2..@number)
-    array = []
+    array = [2]
+    prime = 2
+
     range.each do |r|
-      array.push(r)
-      r = r + 1
+      if (r != prime) && (r%prime != 0)
+        array.push(r)
+      end
     end
     array
+
+
+
   end
 end
