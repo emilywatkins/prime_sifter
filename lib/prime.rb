@@ -5,15 +5,23 @@ class Prime
 
   def sift
     range = (2..@number)
-    array = [2]
+    # array = [2]
     prime = 2
 
-    range.each do |r|
-      if (r != prime) && (r%prime != 0)
-        array.push(r)
-      end
-    end
-    array
+    new_array = range.reject { |r| (r != prime) & (r%prime == 0) }
+
+    new_array
+
+
+    # while prime < 4
+    #   range.each do |r|
+    #     if (r%prime != 0)
+    #       array.push(r)
+    #     end
+    #   end
+    #   prime = prime + 1
+    #   array
+    # end
 
 
 

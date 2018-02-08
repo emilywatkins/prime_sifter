@@ -12,4 +12,10 @@ describe("prime") do
     number = Prime.new(6)
     expect(number.sift()).to(eq([2,3,5]))
   end
+
+  it("iterates through incrimenting prime by 1") do
+    number = Prime.new(9)
+    expect(number.sift()).to(eq([2,3,5,7]))
+  end
+
 end
